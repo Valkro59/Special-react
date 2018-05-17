@@ -1,0 +1,19 @@
+stars > .star { /* Le > prend l'enfant direct */
+    display: inline-block;/*  Pour aligner les étoiles */
+}
+
+.star {
+    color:orangered; /* couleur étoile */
+    font-size: 2rem; /* taille étoile */
+
+}
+.stars > .active:before, /*  le active permet de cibler l'étoile */
+.stars:hover > .star:before { /* before pour ce qu'il y a avant le span et after pour ce qu'il y a aprés */
+    content: '★'; /* copié d'étoile forme pleine d'internet */
+    position: absolute; /* la position absolue permet de superposer l'étoile pleine au dessus de l'étoile vide */
+    cursor: pointer; /* lorsque l'on pointe avec la souris  */
+}
+
+ .stars > .star:hover ~ .star:before { /*Permet de définir l'état de star avant le hover */
+   content: '';  /* ici on conserve l'étoile vide */
+}

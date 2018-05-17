@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Article from './Article'; // On importe le fichier Article
 import './App.css';
-import TextEditable from './TextEditable';//  On importe également le ficheir TextEditable
-import TextArea from './TextArea';
-import NombreDeCaractères from './NombreDeCaractères';
-import AffichageText from './AffichageText';
+import TextEditable from './TextEditable';//  On importe également le fichier TextEditable
+import Message from './Message'; // On importe le Message
+
+
 
 class App extends Component {
   state = {
@@ -27,22 +27,22 @@ class App extends Component {
         </Article>
         {/* On ajoute Article dans la vue aprés l'avoir importé, REACT va transformer le fichier correspondant en HTML par la suite  */}
         <Article title='Hello React World' img="Image/Sonic.png">
-          Alea jacta est
+          Sonic, super c'est Sonic
         </Article>
 
-        <div className="container">
-          <h1>Message</h1>
-          <TextArea className="text-area" />
-          <NombreDeCaractères />
-          <AffichageText />
 
-        </div>
-
-
+        {/* ETAPE 2 MESSAGE, on ajoute le message */}
+        <h1>Message</h1>
+        <Message limit="30"/>  {/* ETAPE 4 On rajoute un attribut limit pour définir une limite de caractères sur chaque message pour ne pas avoir qu'une limite unique */}
+        
+        {/* On ajoute les étoiles de Vote, nbStars permet de choisir le nombre d'étoiles */}
+        
+        
 
       </div>
     );
-  }
-}
 
+  }
+
+}
 export default App;
