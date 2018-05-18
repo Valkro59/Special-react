@@ -3,7 +3,7 @@ import Article from './Article'; // On importe le fichier Article
 import './App.css';
 import TextEditable from './TextEditable';//  On importe également le fichier TextEditable
 import Message from './Message'; // On importe le Message
-
+import Quote from './Quote';
 
 
 class App extends Component {
@@ -17,6 +17,10 @@ class App extends Component {
     return (
       <div className="container">
         <h1>Mon composant APP</h1>
+
+        <Quote />
+
+
         {/* On injecte ici le composant TextEditable et on donne la fonction 'save'; le premier save est une props et le second est la fonction définie avant*/}
         <TextEditable save={this.save}>
           {/* On reprend le champ text redéfinie aprés la fonction save */}
